@@ -1,0 +1,17 @@
+settings:
+  prefix: "&8[&bOwnerPanel&8] "
+  monitoring-update-interval: 40
+  logs-file-name: "logs.yml"
+
+modules:
+  monitoring: true
+  player-inspector: true
+  player-management: true
+  world-management: true
+  history: true
+
+integration:
+  ban-command: "ban {player} {reason} -s"
+  unban-command: "pardon {player}"
+  mute-command: "mute {player} {reason}"
+  unmute-command: "unmute {player}"
