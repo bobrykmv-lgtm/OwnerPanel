@@ -1,0 +1,50 @@
+name: OwnerPanel
+version: 1.0.4
+main: com.chaossmp.ownerpanel.OwnerPanel
+api-version: '1.21'
+author: W1nUser
+description: ChaosSMP advanced administration and monitoring panel
+
+commands:
+  ownerpanel:
+    description: Главная административная панель OwnerPanel
+    usage: /ownerpanel [help|status]
+    permission: chaospanel.use
+
+permissions:
+  chaospanel.use:
+    description: Доступ к открытию базовой панели
+    default: false
+  chaospanel.monitor:
+    description: Доступ к мониторингу сервера и TPS/MSPT
+    default: false
+  chaospanel.inspect:
+    description: Доступ к инспектору игроков и просмотру инвентарей
+    default: false
+  chaospanel.teleport:
+    description: Доступ к телепортации к игрокам и координатам
+    default: false
+  chaospanel.heal:
+    description: Доступ к восстановлению здоровья и голода игроков
+    default: false
+  chaospanel.punish:
+    description: Доступ к управлению наказаниями (бан, кик, мут)
+    default: false
+  chaospanel.worlds:
+    description: Доступ к управлению мирами, погодой и временем
+    default: false
+  chaospanel.history:
+    description: Доступ к просмотру логов и истории действий
+    default: false
+  chaospanel.admin:
+    description: Полный доступ ко всем функциям OwnerPanel
+    default: false
+    children:
+      chaospanel.use: true
+      chaospanel.monitor: true
+      chaospanel.inspect: true
+      chaospanel.teleport: true
+      chaospanel.heal: true
+      chaospanel.punish: true
+      chaospanel.worlds: true
+      chaospanel.history: true
